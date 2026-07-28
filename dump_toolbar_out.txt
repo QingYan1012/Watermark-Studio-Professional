@@ -1,0 +1,236 @@
+legacy_app.py total lines = 4536
+
+===== [1] legacy TOP-LEVEL  App.X = ...  (patch 绑定动作) =====
+ 2566 | App._hit_resize_handle = _p_hit_resize
+ 2567 | App.on_canvas_press = _p_press
+ 2568 | App.on_canvas_drag = _p_drag
+ 2569 | App.on_canvas_release = _p_release
+ 2570 | App._request_redraw = _p_request_redraw
+ 2571 | App._on_canvas_resize = _p_on_resize
+ 2572 | App._compute_scaled_fonts = _p_fonts
+ 2656 | App.toggle_theme = _t_toggle_theme
+ 2657 | App._post_theme_restore = _post_theme_restore
+ 2962 | App._build_layout = _rc_wrapped_build_layout
+ 2963 | App.on_rect_crop = _rc_on_rect_crop
+ 3133 | App._build_element_menu = _rc2_build_element_menu
+ 3134 | App.on_canvas_right_click = _rc2_on_canvas_right_click
+ 3135 | App.on_elem_list_right_click = _rc2_on_elem_list_right_click
+ 3136 | App._rc2_add_at = _rc2_add_at
+ 3158 | App._build_layout = _rc2_wrapped_build
+ 3174 | App._draw_rulers = _rc_safe_draw_rulers
+ 3373 | App._redraw_canvas = _un_wrapped_redraw
+ 3385 | App._build_layout = _un_wrapped_build
+ 3678 | App.on_perspective_crop = _ap_on_perspective_crop
+ 3698 | App._auto_perspective = _ap_auto_perspective
+ 3713 | App._build_layout = _ap_wrapped_build_layout
+ 4017 | App._auto_perspective = _ap_auto_perspective
+ 4138 | App._auto_perspective = _ap_auto_perspective
+ 4238 | App._auto_perspective = _ap_auto_perspective_v6
+ 4427 | App._load_current = _rb_load_current
+ 4453 | App.on_batch_export = _rb_batch_export
+ 4466 | App._build_canvas = _rb_build_canvas
+
+===== [2] legacy TOP-LEVEL  Y = App.X  (orig 指针) =====
+ 2941 | _rc_orig_build_layout = App._build_layout
+ 3154 | _rc2_orig_build = App._build_layout
+ 3163 | _rc_orig_draw_rulers = App._draw_rulers
+ 3366 | _un_orig_redraw = App._redraw_canvas
+ 3375 | _un_orig_build = App._build_layout
+ 3701 | _ap_orig_build_layout = App._build_layout
+ 4416 | _rb_orig_load = App._load_current
+ 4438 | _rb_orig_batch = App.on_batch_export
+ 4455 | _rb_orig_bc = App._build_canvas
+
+===== [3] legacy COMMENT lines mentioning patch/补丁/架空/wrapped =====
+ 2466 | # === DRAG_PATCH_V1 ===
+ 2573 | # === /DRAG_PATCH_V1 ===
+ 2576 | # === THEME_PATCH_V1 ===
+ 2658 | # === /THEME_PATCH_V1 ===
+ 2661 | # === RECT_CROP_PATCH_V1 ===
+ 2964 | # === /RECT_CROP_PATCH_V1 ===
+ 2967 | # === RIGHTCLICK_PATCH_V2 ===
+ 3159 | # === /RIGHTCLICK_PATCH_V2 ===
+ 3162 | # === RULER_SAFE_PATCH_V1 ===
+ 3175 | # === /RULER_SAFE_PATCH_V1 ===
+ 3178 | # === RIGHTCLICK_PATCH_V3 ===
+ 3278 | # === /RIGHTCLICK_PATCH_V3 ===
+ 3282 | # === UNDO_PATCH_V1 ===
+ 3386 | # === /UNDO_PATCH_V1 ===
+ 3389 | # === PERSP_SNAP_PATCH_V1 ===
+ 3494 | # === /PERSP_SNAP_PATCH_V1 ===
+ 3497 | # === AUTOPERSP_PATCH_V1 ===
+ 3714 | # === /AUTOPERSP_PATCH_V1 ===
+ 4023 | # _ap_auto_perspective。dispatcher 与弹窗 lambda 用全局名调用，运行时解析到本 V5 版。
+
+===== [4] legacy TOP-LEVEL def NAME @ line  (函数定义清单，定删除边界用) =====
+   81 | def _apply_theme
+   88 | def T
+   97 | def _native
+  103 | def _retheme_native
+  111 | def _disp_font
+  115 | def _nice_step
+  124 | def sanitize_filename
+  275 | def _solve3x3
+ 2460 | def run
+ 2469 | def _p_hit_resize
+ 2481 | def _p_press
+ 2501 | def _p_drag
+ 2524 | def _p_release
+ 2535 | def _p_request_redraw
+ 2540 | def _p_on_resize
+ 2554 | def _p_fonts
+ 2579 | def _t_toggle_theme
+ 2641 | def _post_theme_restore
+ 2919 | def _rc_on_rect_crop
+ 2943 | def _rc_wrapped_build_layout
+ 2970 | def _rc2_log
+ 2980 | def _rc2_menu_kwargs
+ 2988 | def _rc2_build_element_menu
+ 3002 | def _rc2_on_canvas_right_click
+ 3039 | def _rc2_on_elem_list_right_click
+ 3053 | def _rc2_add_at
+ 3072 | def _pc_draw_canvas
+ 3144 | def _rc2_bind
+ 3155 | def _rc2_wrapped_build
+ 3164 | def _rc_safe_draw_rulers
+ 3180 | def _rc3_log
+ 3190 | def _rc3_menu_kw
+ 3198 | def _rc2_build_element_menu
+ 3212 | def _rc2_on_canvas_right_click
+ 3247 | def _rc2_on_elem_list_right_click
+ 3261 | def _rc2_add_at
+ 3286 | def _un_snap
+ 3292 | def _un_push
+ 3303 | def _un_observe
+ 3326 | def _un_commit
+ 3333 | def _un_do
+ 3367 | def _un_wrapped_redraw
+ 3376 | def _un_wrapped_build
+ 3392 | def _pc_ensure_edges
+ 3417 | def _pc_snap
+ 3442 | def _pc_new_drag
+ 3457 | def _pc_new_draw
+ 3468 | def _pc_new_build
+ 3501 | def _autodetect_corners
+ 3566 | def _do_transform_scaled
+ 3584 | def _ap_new_apply_temp
+ 3617 | def _ap_new_init
+ 3631 | def _ap_do_autodetect
+ 3644 | def _ap_new_build_ui
+ 3661 | def _ap_on_perspective_crop
+ 3681 | def _ap_auto_perspective
+ 3702 | def _ap_wrapped_build_layout
+ 3723 | def _autodetect_corners
+ 3839 | def _order_pts
+ 3846 | def _autodetect_cv
+ 3900 | def _autodetect_corners
+ 3909 | def _proj_t
+ 3916 | def _warp_tri
+ 3935 | def _warp_corners
+ 3964 | def _warp_scaled
+ 3972 | def _ap_auto_perspective
+ 4009 | def _commit_full
+ 4024 | def _autodetect_cv
+ 4082 | def _autodetect_corners
+ 4088 | def _center_fallback
+ 4092 | def _ap_do_autodetect
+ 4101 | def _ap_auto_perspective
+ 4145 | def _v6_build_edges
+ 4154 | def _v6_scan_box
+ 4204 | def _ap_do_autodetect
+ 4219 | def _ap_auto_perspective_v6
+ 4245 | def _v6_scan_box
+ 4299 | def _ap_do_autodetect
+ 4317 | def _pc_refine_build_edges
+ 4325 | def _pc_refine_edges
+ 4398 | def _rb_pc_build
+ 4417 | def _rb_load_current
+ 4429 | def _rb_count_edited
+ 4439 | def _rb_batch_export
+ 4456 | def _rb_build_canvas
+ 4473 | def _bend_build_edges
+ 4480 | def _bend_snap
+ 4494 | def _bend_refine
+ 4518 | def _bs_build
+
+===== [5] EXTERNAL overrides (App.X= / legacy.X= / setattr(legacy,..)) =====
+  --- performance_patch.py ---
+    484 | setattr(legacy, key, value)
+    499 | legacy.template_unresolved_fields = _perf_template_unresolved_fields
+    510 | App._request_redraw = _perf_request_redraw
+    555 | App._redraw_canvas = _perf_redraw_canvas
+    574 | App._ensure_dotgrid = _perf_ensure_dotgrid
+    621 | App._ensure_shadow = _perf_ensure_shadow
+    641 | App._draw_rulers = _perf_draw_rulers
+    643 | App._perf_patch_installed = True
+    808 | App._current_preview_source = _perf_current_preview_source
+    809 | App._perf_bg_lanczos = _perf_bg_lanczos
+    810 | App._get_perf_preview_lock = _get_perf_preview_lock
+    811 | App._async_preview_installed = True
+    994 | App._load_current = _perf_load_current
+    995 | App._load_prefetch_installed = True
+   1096 | App._apply_sort = _async_apply_sort
+   1097 | App._async_list_fill_installed = True
+   1177 | App._un_do = _undo_fix_do
+   1193 | App._build_layout = _undo_fix_build_layout
+   1194 | App._undo_fix_installed = True
+   1271 | App._perf_un_commit = _perf_un_commit
+   1274 | legacy._un_observe = _perf_un_observe
+   1278 | App._undo_observe_installed = True
+   1375 | App.toggle_theme = _perf_toggle_theme
+   1376 | App._theme_fix_installed = True
+   1412 | App._load_theme_pref = _load_theme_pref
+   1413 | App._save_theme_pref = _save_theme_pref
+   1414 | App._theme_pref_fix_installed = True
+   1666 | App.on_batch_export = _preflight_then_export
+   1667 | App._export_fix_installed = True
+   1964 | App._build_bottom_bar = _wrapped
+   1965 | App._smart_output_installed = True
+   2052 | App.on_export_current = _fixed_export_current
+   2053 | App._export_current_fix_installed = True
+   2169 | App._panel = _patched_panel
+   2187 | App._build_toolbar = _wtb
+   2196 | App._build_bottom_bar = _wbb
+   2245 | App._build_layout = _wb
+   2247 | App._panel_border_fix_installed = True
+   2298 | legacy._rb_IF = _IF
+   2299 | legacy._bs_IF = _IF
+   2304 | legacy._pc_refine_edges = _fixed_refine_edges
+   2305 | legacy._bend_refine = _fixed_bend_refine
+   2309 | App._persp_btn_fix_installed = True
+  --- ui\bridge.py ---
+    336 | setattr(legacy, name, getattr(constants, name))
+    343 | legacy.THEMES = theme.THEMES
+    344 | legacy.THEME = theme.THEME
+    345 | legacy.ACCENT = theme.ACCENT
+    346 | legacy.T = theme.T
+    347 | legacy._NATIVE_WIDGETS = theme.NATIVE_WIDGETS
+    348 | legacy._native = theme.native
+    349 | legacy._retheme_native = theme.retheme_native
+    353 | legacy.ACCENT = theme.ACCENT
+    355 | legacy._apply_theme = _apply_theme
+    360 | legacy._disp_font = utils.disp_font
+    361 | legacy._nice_step = utils.nice_step
+    362 | legacy.sanitize_filename = utils.sanitize_filename
+    370 | legacy.SearchableCombobox = SearchableCombobox
+    382 | legacy.RectCropDialog = RectCropDialog
+    411 | legacy.App._show_help = _show_help
+    412 | legacy.App.on_edit_current_data = _on_edit_current_data
+    413 | legacy.App._show_match_dialog = _show_match_dialog
+    414 | legacy.App.on_open_library = _on_open_library
+    427 | legacy._ws_services = services
+    448 | legacy.PerspectiveCropDialog = PerspectiveCropDialog
+    464 | legacy._rb_IF = _IF
+    465 | legacy._bs_IF = _IF
+    470 | legacy._pc_refine_edges = _fixed_refine_edges
+    471 | legacy._bend_refine = _fixed_bend_refine
+    481 | legacy.App.on_batch_export = _fixed_batch_export
+    503 | legacy._refactor_bridge_installed = True
+  --- ui\bridge_panels.py ---
+     51 | App._build_left_panel = _bridge_build_left_panel
+     63 | App._build_right_panel = _bridge_build_right_panel
+     75 | App._build_toolbar = _bridge_build_toolbar
+     87 | App._build_bottom_bar = _bridge_build_bottom_bar
+     99 | App._build_canvas = _bridge_build_canvas
+    111 | App._refresh_property_panel = _bridge_refresh_property_panel
+    122 | legacy._bridge_panels_installed = True
